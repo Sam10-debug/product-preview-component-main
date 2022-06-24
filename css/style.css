@@ -1,0 +1,131 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: hsl(30, 38%, 92%);
+	
+	font-family: 'Montserrat', sans-serif;
+}
+main{
+	display: flex;
+	height: fit-content;
+	width: 45%;
+
+}
+#perfume{
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	color: hsl(228, 12%, 48%);
+}
+main>section:first-of-type{
+	height: 489px;
+	flex-basis: 50%;
+}
+#mobile{
+	display: none;
+}
+section:first-of-type>img:first-of-type{
+	width: 100%;
+	height: 100%;
+	border-bottom-left-radius: 0.5rem;
+	border-top-left-radius: 0.5rem;
+}
+main section+section{
+	min-height: 100%;
+	/* height: 100%; */
+	background: #ffffff;
+	flex-basis: 50%;
+	padding: 2rem;
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+h1{
+	margin: 0.7rem 0;
+	font-size: 1.5rem;
+	color:  hsl(137,100%,0%);
+	font-family: 'Fraunces', serif;
+	font-weight: bolder;
+}
+p{
+	margin-bottom: 1.5rem;
+	color: hsl(228, 12%, 48%);
+	line-height: 1.5;
+}
+#money{
+	/* background: red; */
+	display: flex;
+	justify-content: space-between;
+	/* font-size: 1.5rem; */
+	align-items: center;
+	/* width: 160px; */
+}
+#money> span:first-child{
+	font-size: 1.8rem;
+	font-weight: 700;
+	color:  hsl(137,100%,35%);
+}
+#money> span:last-child{
+	text-decoration: line-through;
+	/* margin-left: -40px; */
+}
+#cart{
+	background:  hsl(137,100%,10%);
+	margin-top: 2.5rem;
+	height: 37px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	border-radius: 0.5rem;
+	font-weight: bold;
+}
+@media screen and (max-width:768px) {
+	body{
+		padding: 1rem 0;
+	}
+	#desktop{
+		display: none;
+	}
+	#mobile{
+		display: flex;
+		width: 100%;
+		border-top-left-radius: 0.5rem;
+		border-top-right-radius: 0.5rem;
+	}
+	main{
+		display: flex;
+		flex-direction: column;
+		height: 90%;
+		width: 90%;
+	}
+	section:first-of-type>img:first-of-type{
+		border-top-right-radius: 0.5rem;
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0rem;
+		height: 100%;
+	}
+	main section+section{
+		border-top-right-radius: 0rem;
+		border-bottom-left-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+	}
+	#money{
+		/* background: red; */
+		display: flex;
+		justify-content: flex-start;
+		/* font-size: 1.5rem; */
+		align-items: center;
+		padding-left: 1rem;
+		/* width: 160px; */
+	}
+	#money> span:first-child{
+		margin-right: 1rem;
+	}
+}
